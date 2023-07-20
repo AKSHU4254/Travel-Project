@@ -1,0 +1,32 @@
+.hero-img{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    position: relative;
+}
+
+.hero-img h1,h2{
+    font-size: 2.4rem;
+    color: white;
+}
+
+.hero-img p{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.heading{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:640px){
+    .hero-img h1{
+        font-size: 2rem;
+    }
+      
+}
