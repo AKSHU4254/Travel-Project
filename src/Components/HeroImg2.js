@@ -1,4 +1,4 @@
-import "./HeroImg2Styles.css";
+// import "./HeroImg2Styles.css";
 import "./HeroImgStyle.css";
 
 import React, { useEffect, useState } from "react";
@@ -29,8 +29,8 @@ const HeroImg2 = (props) => {
     }
   };
   return (
-    <div>
     <div className='hero'>
+    <div className='mask'>
     {homepage.length > 0 && (
       <img
         className="into-img"

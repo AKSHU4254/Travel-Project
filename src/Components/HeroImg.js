@@ -40,11 +40,10 @@ const HeroImg = () => {
       </div>
       <div className="content">
         <div>
-          {/* You can map over the homepage array to display more content */}
           { homepage.map((item) => (
               <div key={item._id}>
                 <h3>{item.text}</h3>
-                <h2>{item.title}</h2>
+                <h1>{item.title}</h1>
               </div>
             ))}
         </div>
