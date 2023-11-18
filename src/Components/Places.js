@@ -1,11 +1,10 @@
-import Gallary from "./Gallary";
-// import GallaryData from "./GallaryData";
-import "./GallaryDataStyles.css";
+import "./styles/GallaryDataStyles.css";
 import React, { useEffect, useState } from "react";
 
 const Places = () => {
   const [destination, setDestination] = useState([]);
-  console.log(destination);
+
+  // console.log(destination);
 
   useEffect(() => {
     setPlaces();
@@ -34,7 +33,15 @@ const Places = () => {
       <div className="places-container">
         {destination.map((val, ind) => {
           return (
-            <Gallary key={ind} gallaryImg={val.gallaryImg} title={val.title} />
+            <div className="gallary-card">
+              <img
+                src={`http://localhost:4000/${val.gallaryImg}`}
+                alt="AboutImage"
+                height={150}
+                width={200}
+              />
+              <div className="card-title">{val.title}</div>
+            </div>
           );
         })}
       </div>

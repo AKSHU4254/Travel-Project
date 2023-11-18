@@ -1,0 +1,35 @@
+.container {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+.box{
+  display: flex;
+  /* text-align: center; */
+}
+.box-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+.tour_info {
+  border: 1px solid grey;
+  padding: 10px;
+  margin-top: 20px;
+}
+.tour_details {
+  padding: 20px;
+  width: 100%;
+}
+.tour_details h2{
+  text-align: center;
+
+}
+.review{
+    display: flex;
+    width: 100%;
+}

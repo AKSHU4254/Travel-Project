@@ -1,15 +1,13 @@
-import "./styles/HeroImgStyle.css";
-
 import React, { useEffect, useState } from "react";
 
-const HeroImg = () => {
+const UserProfile = () => {
   const [homepage, setHomepage] = useState([]);
 
   useEffect(() => {
-    setPlaces();
+    setbackground();
   }, []);
 
-  const setPlaces = async () => {
+  const setbackground = async () => {
     try {
       const response = await fetch("http://localhost:4000/homepage", {
         headers: {
@@ -28,7 +26,7 @@ const HeroImg = () => {
   };
 
   return (
-    <div className="hero">
+    <div>
       <div className="mask">
         {homepage.length > 0 && (
           <img
@@ -38,16 +36,10 @@ const HeroImg = () => {
           />
         )}
       </div>
-      <div className="content">
-        {homepage.map((item) => (
-          <div key={item._id}>
-            <h2>{item.text}</h2>
-            <h1>{item.title}</h1>
-          </div>
-        ))}
-      </div>
+      <div>
+      <button></button></div>
     </div>
   );
 };
 
-export default HeroImg;
+export default UserProfile;

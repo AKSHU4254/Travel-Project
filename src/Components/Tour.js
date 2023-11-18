@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import TourCard from './TourCard'
-import "./TourCardStyle.css"
+import React, { useEffect, useState } from "react";
+import "./styles/TourCardStyle.css";
+import { Link } from "react-router-dom";
 
 const Tour = () => {
   const [tour, setTour] = useState([]);
-  console.log(tour);
 
   useEffect(() => {
     setPlaces();
@@ -29,21 +28,39 @@ const Tour = () => {
   };
   return (
     <div>
-        <h1 className='tour-heading'>Destination List</h1>
-        <div className='tour-container'>
-            {tour.map((val,ind)=>{
-        return(
-            <TourCard key={ind}
-            productImg={val.productImg}
-            details={val.details}
-            price={val.price}/>
-        )
-    })}
-    
+      <h1 className="tour-heading">Destination List</h1>
+      <div className="tour-container">
+        {tour.map((val, ind) => {
+          return (
+            <div className="tour-card">
+              <div>
+                <Link to={`/tourdetails/${val._id}`}>
+                  <img
+                    src={`http://localhost:4000/${val.productImg}`}
+                    alt="AboutImage"
+                  />
+                </Link>
+              </div>
+              <div className="tour-card-item">
+                <h3 className="tour-details">{val.name}</h3>
+                <span className="tour-details">Click For More</span>
+                <div className="pro-btns">
+                  <div>
+                    <p className="tour-details">₹ {val.price}/Per Person</p>
+                  </div>
+                  <div>
+                    <Link to={`/bookingform/${val.name}`} className="btn">
+                      BookNow
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
-    </div>
-
-  )
-}
+  );
+};
 
 export default Tour;

@@ -1,5 +1,5 @@
 // import "./HeroImg2Styles.css";
-import "./HeroImgStyle.css";
+import "./styles/HeroImgStyle.css";
 
 import React, { useEffect, useState } from "react";
 

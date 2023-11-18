@@ -4,11 +4,18 @@ import Home from "./routes/Home";
 import Contact from "./routes/Contact";
 import Destinations from "./routes/Destinations";
 import Tours from "./routes/Tours";
-import About from "./routes/About";
+import Login from "./routes/Login";
+import UserProfile from "./Components/UserProfile";
+
 
 
 
 import { Route, Routes } from "react-router-dom";
+import PrivateComp from "./Components/PrivateComp";
+import BookingForm from "./Components/BookingForm";
+import Success from "./Components/Success";
+import Cancal from "./Components/Cancal";
+import TourDetails from "./Components/TourDetails";
 
 
 
@@ -20,7 +27,20 @@ function App() {
       <Route path='/destinations' element={<Destinations/>}/>
       <Route path='/tours' element={<Tours/>}/>
       <Route path='/contact' element={<Contact/>}/>
-      <Route path='/about' element={<About/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/success' element={<Success/>}></Route>
+      <Route path='/cancal' element={<Cancal/>}></Route>
+      <Route path='/tourdetails/:id' element={<TourDetails/>}></Route>
+
+
+
+      <Route element={<PrivateComp/>}>
+      <Route path='/userprofile' element={<UserProfile/>}/>
+      <Route path='/bookingform/:id' element={<BookingForm/>}/>
+  
+
+
+      </Route>
       </Routes>
     </div>
   );

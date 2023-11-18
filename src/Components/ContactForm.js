@@ -1,4 +1,4 @@
-import "./FormStyles.css";
+import "./styles/FormStyles.css";
 import Tower from "../assets/Ifeeltower.png";
 import React, { useState } from "react";
 
@@ -50,7 +50,7 @@ const ContactForm = () => {
       <div className="contact-page">
         <form onSubmit={handleSubmit}>
           <p>
-            <label>Your Name</label>
+            <label>Name</label>
           </p>
           <input
             type="text"
